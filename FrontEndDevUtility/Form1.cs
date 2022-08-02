@@ -18,9 +18,11 @@ namespace FrontEndDevUtility
         public Form1()
         {
             InitializeComponent();
+            buildFolder = Properties.Settings.Default.defaultBuildFP;
+            sdFolder = Properties.Settings.Default.defaultSDFP;
             statusMessage.Text = "";
-            buildFP.Text = "";
-            SDFP.Text = "";
+            buildFP.Text = buildFolder;
+            SDFP.Text = sdFolder;
         }
         private void buildFolderButton_Click(object sender, EventArgs e)
         {
@@ -31,6 +33,9 @@ namespace FrontEndDevUtility
                 // shows the path to the selected folder in the folder dialog
                 buildFolder = fbd.SelectedPath;
                 buildFP.Text = buildFolder;
+                Properties.Settings.Default.defaultBuildFP = buildFolder;
+                Properties.Settings.Default.Save();
+
         }
 
 
@@ -43,6 +48,8 @@ namespace FrontEndDevUtility
                 // shows the path to the selected folder in the folder dialog
                 sdFolder = fbd.SelectedPath;
             SDFP.Text = sdFolder;
+            Properties.Settings.Default.defaultSDFP = sdFolder;
+            Properties.Settings.Default.Save();
             
 
         }
@@ -77,11 +84,27 @@ namespace FrontEndDevUtility
             {
                 File.Copy(newPath, newPath.Replace(buildFolder, sdFolder), true);
             }
+            DialogResult res = MessageBox.Show("Web App Updated Successfully. Eject SD card", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (res == DialogResult.OK)
+            {
+                
+                
+            }
+            
 
-            statusMessage.Text = "Updated Web App Successfully!!";
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
