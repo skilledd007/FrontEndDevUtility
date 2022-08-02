@@ -35,11 +35,12 @@
             this.openSDFile = new System.Windows.Forms.OpenFileDialog();
             this.UpdateWebApp = new System.Windows.Forms.Button();
             this.statusMessage = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buildFolderButton
             // 
-            this.buildFolderButton.Location = new System.Drawing.Point(429, 204);
+            this.buildFolderButton.Location = new System.Drawing.Point(53, 151);
             this.buildFolderButton.Name = "buildFolderButton";
             this.buildFolderButton.Size = new System.Drawing.Size(133, 23);
             this.buildFolderButton.TabIndex = 0;
@@ -49,7 +50,7 @@
             // 
             // SDFolderButton
             // 
-            this.SDFolderButton.Location = new System.Drawing.Point(429, 318);
+            this.SDFolderButton.Location = new System.Drawing.Point(53, 265);
             this.SDFolderButton.Name = "SDFolderButton";
             this.SDFolderButton.Size = new System.Drawing.Size(135, 23);
             this.SDFolderButton.TabIndex = 1;
@@ -60,7 +61,7 @@
             // buildFP
             // 
             this.buildFP.AutoSize = true;
-            this.buildFP.Location = new System.Drawing.Point(474, 230);
+            this.buildFP.Location = new System.Drawing.Point(98, 177);
             this.buildFP.Name = "buildFP";
             this.buildFP.Size = new System.Drawing.Size(35, 13);
             this.buildFP.TabIndex = 3;
@@ -69,7 +70,7 @@
             // SDFP
             // 
             this.SDFP.AutoSize = true;
-            this.SDFP.Location = new System.Drawing.Point(474, 344);
+            this.SDFP.Location = new System.Drawing.Point(98, 291);
             this.SDFP.Name = "SDFP";
             this.SDFP.Size = new System.Drawing.Size(35, 13);
             this.SDFP.TabIndex = 5;
@@ -82,7 +83,7 @@
             // 
             // UpdateWebApp
             // 
-            this.UpdateWebApp.Location = new System.Drawing.Point(429, 425);
+            this.UpdateWebApp.Location = new System.Drawing.Point(53, 372);
             this.UpdateWebApp.Name = "UpdateWebApp";
             this.UpdateWebApp.Size = new System.Drawing.Size(135, 23);
             this.UpdateWebApp.TabIndex = 6;
@@ -93,16 +94,26 @@
             // statusMessage
             // 
             this.statusMessage.AutoSize = true;
-            this.statusMessage.Location = new System.Drawing.Point(474, 489);
+            this.statusMessage.Location = new System.Drawing.Point(98, 436);
             this.statusMessage.Name = "statusMessage";
             this.statusMessage.Size = new System.Drawing.Size(88, 13);
             this.statusMessage.TabIndex = 7;
             this.statusMessage.Text = "Status Messages";
             this.statusMessage.Click += new System.EventHandler(this.label1_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(487, 58);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "label1";
+            // 
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(1032, 589);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.statusMessage);
             this.Controls.Add(this.UpdateWebApp);
             this.Controls.Add(this.SDFP);
@@ -127,6 +138,7 @@
         private System.Windows.Forms.OpenFileDialog openSDFile;
         private System.Windows.Forms.Button UpdateWebApp;
         private System.Windows.Forms.Label statusMessage;
+        private System.Windows.Forms.Label label1;
     }
 }
 
